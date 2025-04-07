@@ -1,0 +1,20 @@
+.body {
+    font: 170%/1.55 "HSE Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.breadcrumb-item.black::before {
+    color: black !important;
+}
+
+.nav-tabs .nav-link {
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    background-color: white !important;
+    color: black !important;
+}
+
