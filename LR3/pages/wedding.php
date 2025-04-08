@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/index.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
 
 UserActions::requireAuth($_SERVER['SCRIPT_NAME']);
 
@@ -11,7 +11,7 @@ $minMaxBudget = WeddingActions::getBudgetRange();
 $minBudget = $minMaxBudget['min_budget'];
 $maxBudget = $minMaxBudget['max_budget'];
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
 
 <div class="container-fluid" style="width: 1200px">
@@ -77,7 +77,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
             <?php foreach ($weddingItems as $row): ?>
                 <tr>
                     <th scope="row">
-                        <img src="/photo_couple/<?php echo htmlspecialchars($row['photo_couple']); ?>.jpg" style="max-width: 200px;" alt="фото пары">
+                        <img src="/LR3/photo_couple/<?php echo htmlspecialchars($row['photo_couple']); ?>.jpg" style="max-width: 200px;" alt="фото пары">
                     </th>
                     <td class="fw-light"><?php echo htmlspecialchars($row['fio_bride']); ?></td>
                     <td class="fw-light"><?php echo htmlspecialchars($row['fio_groom']); ?></td>
@@ -155,5 +155,5 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
 </script>
 
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/footer.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
 ?>
