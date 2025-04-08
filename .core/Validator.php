@@ -14,7 +14,7 @@ class Validator
         self::$errors = [];
     }
 
-    public static function validateEmail(string $email) : void
+    public static function validateEmail(string $email): void
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             self::$errors[] = "Некорректный адрес почты";
@@ -25,7 +25,7 @@ class Validator
         }
     }
 
-    public static function validatePassword(string $password, string $password2) : void
+    public static function validatePassword(string $password, string $password2): void
     {
         if ($password !== $password2) {
             self::$errors[] = "Введенные пароли не совпадают";
@@ -56,7 +56,7 @@ class Validator
         }
     }
 
-    public static function validateFio(string $fio) : void
+    public static function validateFio(string $fio): void
     {
         if (!preg_match("/[А-ЯЁA-Z][а-яёa-z]+ [А-ЯЁA-Z][а-яёa-z]+ [А-ЯЁA-Z][а-яёa-z]+/u", $fio)) {
             self::$errors[] = "ФИО должно быть в формате: Фамилия Имя Отчество (с заглавной буквы)";
@@ -67,7 +67,7 @@ class Validator
         }
     }
 
-    public static function validateVkProfile(string $vkProfile) : void
+    public static function validateVkProfile(string $vkProfile): void
     {
         if (!filter_var($vkProfile, FILTER_VALIDATE_URL) || !preg_match("/vk.com/", $vkProfile)) {
             self::$errors[] = "Вы ввели неверную ссылку на профиль ВК";
@@ -78,14 +78,14 @@ class Validator
         }
     }
 
-    public static function validateBloodType(string $bloodType) : void
+    public static function validateBloodType(string $bloodType): void
     {
         if (!in_array($bloodType, ['1', '2', '3', '4'])) {
             self::$errors[] = "Выбрана несуществующая группа крови";
         }
     }
 
-    public static function validateRHFactor(string $rhFactor) : void
+    public static function validateRHFactor(string $rhFactor): void
     {
         if (!in_array($rhFactor, ['+', '-'])) {
             self::$errors[] = "Выбран несуществующий резус-фактор";
