@@ -56,7 +56,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
                 <div class="mb-3">
                     <label>ФИО</label>
                     <input type="text" class="form-control" name="fio"
-                           value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Гвоздков Сергей Алексеевич" maxlength="255" required>
+                           value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Нуриев Ильяс Заурович" maxlength="255" required>
                 </div>
 
                 <!-- Поле для ввода ссылки на профиль ВК -->
