@@ -11,7 +11,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
     <div class="row">
         <div class="col-md-5 mx-auto">
             <h1 class="text-center pb-3">Вход в систему</h1>
-            <form class="border border-black rounded-5 shadow-lg py-5 px-5" method="post">
+            <form class="border border-black rounded-5 py-5 px-5" method="post">
                 <?php
                 if (!empty($error)) {
                     echo "<div class='mb-3 text-danger'>";

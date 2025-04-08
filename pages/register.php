@@ -11,7 +11,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
     <div class="row">
         <div class="col-md-5 mx-auto">
             <h1 class="text-center pb-3">Регистрация</h1>
-            <form class="border border-black rounded-5 shadow-lg py-5 px-5" method="post">
+            <form class="border border-black rounded-5 py-5 px-5" method="post">
                 <!-- Вывод ошибок -->
                 <?php
                 if (!empty($errors)) {
@@ -56,7 +56,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                 <div class="mb-3">
                     <label>ФИО</label>
                     <input type="text" class="form-control" name="fio"
-                           value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Гвоздков Сергей Алексеевич" maxlength="255" required>
+                           value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Иванов Иван Иванович" maxlength="255" required>
                 </div>
 
                 <!-- Поле для ввода ссылки на профиль ВК -->
