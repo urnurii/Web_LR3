@@ -2,7 +2,7 @@
 
 class WeddingActions
 {
-    public static function clearFilters() : void
+    public static function clearFilters(): void
     {
         if (isset($_GET['clearFilter'])) {
             header('Location: ' . $_SERVER['PHP_SELF']);
@@ -10,7 +10,7 @@ class WeddingActions
         }
     }
 
-    public static function getWeddingItemsTable() : array
+    public static function getWeddingItemsTable(): array
     {
         return WeddingLogic::getWeddingWithParams(
             $_GET['fio_bride'] ?? null,
@@ -21,12 +21,12 @@ class WeddingActions
         );
     }
 
-    public static function getHostsOptions() : string
+    public static function getHostsOptions(): string
     {
         return WeddingLogic::getHostsOptions($_GET['host_id'] ?? null);
     }
 
-    public static function getBudgetRange() : array
+    public static function getBudgetRange(): array
     {
         return WeddingLogic::getMinMaxBudget();
     }

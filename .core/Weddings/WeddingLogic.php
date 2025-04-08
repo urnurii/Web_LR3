@@ -2,7 +2,7 @@
 
 class WeddingLogic
 {
-    public static function getWeddingWithParams(?string $fio_bride, ?string $fio_groom, ?int $min_budget, ?int $max_budget, ?int $host_id) : array
+    public static function getWeddingWithParams(?string $fio_bride, ?string $fio_groom, ?int $min_budget, ?int $max_budget, ?int $host_id): array
     {
         $params = [];
 
@@ -29,7 +29,7 @@ class WeddingLogic
         return WeddingTable::getWeddingsWithParams($params);
     }
 
-    public static function getHostsOptions($selectedHost) : string
+    public static function getHostsOptions($selectedHost): string
     {
         $html = '<option value="">Все организаторы</option>';
 

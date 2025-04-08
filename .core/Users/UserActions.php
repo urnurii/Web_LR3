@@ -1,10 +1,10 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/index.php');
 
 class UserActions
 {
     // Функция для проверки авторизации пользователя
-    public static function requireAuth(string $from) : void
+    public static function requireAuth(string $from): void
     {
         if (!UserLogic::isAuthorized()) {
             // Если пользователь не авторизован, перенаправляем на страницу входа
@@ -43,7 +43,7 @@ class UserActions
             return [];
         }
 
-        // Передаем все необходимые параметры в UserLogic::signUp
+        // Передаем все необходимые параметры в Users\.core\Users\UserLogic::signUp
         $errors = UserLogic::signUp(
             $_POST['email'], $_POST['password1'], $_POST['password2'], $_POST['fio'], $_POST['vk_profile'], $_POST['blood_type'], $_POST['Rh_factor']
         );

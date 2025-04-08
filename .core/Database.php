@@ -20,30 +20,34 @@ class Database
         );
     }
 
-    protected function __clone() {}
+    protected function __clone()
+    {
+    }
 
-    public function __wakeup() {
+    public function __wakeup()
+    {
         throw new \BadMethodCallException("Unable to deserialize database connection.");
     }
 
-    public static function GetInstance() : Database {
+    public static function GetInstance(): Database
+    {
         if (null === self::$instance) {
             self::$instance = new static();
         }
         return self::$instance;
     }
 
-    public static function connection() : \PDO
+    public static function connection(): \PDO
     {
         return static::GetInstance()->connection;
     }
 
-    public static function prepare($statement) : \PDOStatement
+    public static function prepare($statement): \PDOStatement
     {
         return static::connection()->prepare($statement);
     }
 
-    public static function lastInsertId() : int
+    public static function lastInsertId(): int
     {
         return (int)static::connection()->lastInsertId();
     }
