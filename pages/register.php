@@ -1,17 +1,17 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/.core/index.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/index.php");
 
 $errors = UserActions::signUp();
 $from = $_GET['from'] ?? 'wedding.php'; // Если параметр "from" не передан, переходим на wedding.php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
 
 <main class="container-fluid py-3">
     <div class="row">
         <div class="col-md-5 mx-auto">
             <h1 class="text-center pb-3">Регистрация</h1>
-            <form class="border border-black rounded-5 shadow-lg py-5 px-5" method="post">
+            <form class="border border-black rounded-5 py-5 px-5" method="post">
                 <!-- Вывод ошибок -->
                 <?php
                 if (!empty($errors)) {
@@ -56,7 +56,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
                 <div class="mb-3">
                     <label>ФИО</label>
                     <input type="text" class="form-control" name="fio"
-                           value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Нуриев Ильяс Заурович" maxlength="255" required>
+                           value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Иванов Иван Иванович" maxlength="255" required>
                 </div>
 
                 <!-- Поле для ввода ссылки на профиль ВК -->
@@ -124,5 +124,5 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
 </script>
 
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/footer.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
 ?>
