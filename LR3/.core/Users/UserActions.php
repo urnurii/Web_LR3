@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/index.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
 
 class UserActions
 {
@@ -43,7 +43,7 @@ class UserActions
             return [];
         }
 
-        // Передаем все необходимые параметры в Users\.core\Users\UserLogic::signUp
+        // Передаем все необходимые параметры в Users\.core\Users\.core\Users\UserLogic::signUp
         $errors = UserLogic::signUp(
             $_POST['email'], $_POST['password1'], $_POST['password2'], $_POST['fio'], $_POST['vk_profile'], $_POST['blood_type'], $_POST['Rh_factor']
         );

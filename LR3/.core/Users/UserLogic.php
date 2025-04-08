@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/Validator.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/Validator.php');
 
 class UserLogic
 {

@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
--- Host: 127.0.0.1    .core\Database: nebo_db
+-- Host: 127.0.0.1    .core\.core\Database: nebo_db
 -- ------------------------------------------------------
 -- Server version	10.4.32-MariaDB
 

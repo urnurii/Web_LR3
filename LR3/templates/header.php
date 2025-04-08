@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/index.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
 UserActions::signOut();
 $currentUser = UserLogic::currentUser();
 ?>
@@ -9,9 +9,9 @@ $currentUser = UserLogic::currentUser();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_32x32.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link href="/LR3/css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/LR3/images/favicon_32x32.png">
+    <link rel="stylesheet" href="/LR3/css/styles.css">
     <title>Образовательная программа «Прикладная математика и информатика» — Национальный исследовательский университет
         «Высшая школа экономики»</title>
 </head>

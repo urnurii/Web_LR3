@@ -92,7 +92,7 @@
         </div>
     </div>
 </footer>
-<script src="/js/bootstrap.bundle.js"></script>
+<script src="/LR3/js/bootstrap.bundle.js"></script>
 
 </body>
 
