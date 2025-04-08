@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/index.php');
-
+UserActions::signOut();
 $currentUser = UserLogic::currentUser();
 ?>
 <!doctype html>
@@ -75,7 +75,7 @@ $currentUser = UserLogic::currentUser();
                         <div class="d-flex align-items-center gap-2">
                             <span>Вы авторизованы как <span class="text-orange"><?php echo $currentUser['email'] ?></span></span>
                             <form method="POST">
-                                <input type="hidden" name="action" value="log-out">
+                                <input type="hidden" name="action" value="signOut">
                                 <button type="submit" class="btn btn-dark hover-orange py-1" style="font-size: 14px;">
                                     Выйти
                                 </button>
