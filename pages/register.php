@@ -1,10 +1,10 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/index.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/.core/index.php");
 
 $errors = UserActions::signUp();
 $from = $_GET['from'] ?? 'wedding.php'; // Если параметр "from" не передан, переходим на wedding.php
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/header.php");
 ?>
 
 <main class="container-fluid py-3">
@@ -124,5 +124,5 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 </script>
 
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/footer.php");
 ?>

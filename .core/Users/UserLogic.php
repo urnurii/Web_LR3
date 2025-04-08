@@ -1,11 +1,11 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/Validator.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/.core/Validator.php');
 
 class UserLogic
 {
     public static function signUp(
         string $email, string $password, string $password2, string $fio, string $vk_profile, string $blood_type, string $Rh_factor
-    ) : array
+    ): array
     {
         // Валидируем все поля
         Validator::emptyErrors();
@@ -40,7 +40,7 @@ class UserLogic
 
     public static function signIn(
         string $email, string $password
-    ) : string
+    ): string
     {
         if (static::isAuthorized()) {
             return "Вы уже авторизированны";
@@ -66,12 +66,12 @@ class UserLogic
         $_SESSION['user_id'] = null;
     }
 
-    public static function isAuthorized() : bool
+    public static function isAuthorized(): bool
     {
         return (int)($_SESSION['user_id'] ?? 0) > 0;
     }
 
-    public static function currentUser() : array
+    public static function currentUser(): array
     {
         if (!static::isAuthorized()) {
             return [];
